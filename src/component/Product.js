@@ -15,10 +15,8 @@ const Product = () => {
 
     if (!name) {
       dispatch(Add(item));
-    } else {
-      alert(`Product with ID ${item.title} is already in the cart.`);
     }
-  };
+  };  
 
   return (
     <div>
@@ -38,7 +36,7 @@ const Product = () => {
               <h2>{item.id}</h2>
 
               <Link to={`item/${item.id}`}>
-              <img src={item.thumbnail} style={{ height: 150, width: 246 }} />
+                <img src={item.thumbnail} style={{ height: 150, width: 246 }} />
               </Link>
               <h2 style={{ height: 50 }}>Title: {item.title}</h2>
               <h2 style={{ height: 50 }}>Price: {item.price}</h2>

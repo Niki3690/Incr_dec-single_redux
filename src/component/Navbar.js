@@ -4,7 +4,7 @@ import { useSelector } from "react-redux";
 
 const Navbar = () => {
   let namee = useSelector((state) => state.cart);
-  let total = namee.reduce((tot, item) => tot + item.price * item.quantity, 0);
+  let total = namee.reduce((def, item) => def + item.price * item.quantity, 0);
 
   return (
     <div
